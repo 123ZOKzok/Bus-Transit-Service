@@ -3,4 +3,6 @@ class User < ApplicationRecord
 
     has_many :buses
     has_many :buses, through: :bookings
+    
+    validates :username, presence: true, uniqueness: true
 end
